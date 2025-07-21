@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes import login
+from routes import login, register
 from database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -16,3 +16,4 @@ app.add_middleware(
 )
 
 app.include_router(login.router)
+app.include_router(register.router) 

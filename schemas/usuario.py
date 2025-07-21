@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+from typing import Optional
+
 
 class UsuarioBase(BaseModel):
     nombre: str
@@ -11,3 +13,9 @@ class UsuarioResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+class UsuarioRegister(BaseModel):
+    nombre: str
+    clave: str
+    edad: int
+    apellido: Optional[str] = "Paucar"  # solo si decides manejarlo

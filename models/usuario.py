@@ -8,3 +8,4 @@ class Usuario(Base):
     nombre = Column(String, nullable=False)
     clave = Column(String, nullable=False)
     edad = Column(Integer, nullable=False)
+    apellido = Column(String)
